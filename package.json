@@ -1,0 +1,53 @@
+{
+  "name": "use-ua-parser-js",
+  "version": "1.0.0",
+  "description": "React Hook for UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.",
+  "main": "dist/index.js",
+  "module": "use-ua-parser-js.esm.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsdx build"
+  },
+  "keywords": [
+    "user-agent",
+    "device",
+    "parser",
+    "ua",
+    "react-hooks",
+    "react",
+    "ua-parser-js"
+  ],
+  "repository": {
+    "url": "https://github.com/burnpiro/use-us-parser-js",
+    "type": "git"
+  },
+  "author": "Kemal Erdem",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.26",
+    "@types/react-dom": "^17.0.9",
+    "@types/ua-parser-js": "^0.7.36",
+    "prettier": "^2.4.1",
+    "prettier-package-json": "^2.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.4.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "react-dom": ">=16.8"
+  },
+  "dependencies": {
+    "ua-parser-js": "^0.7.28"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120
+  }
+}
