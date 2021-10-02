@@ -1,6 +1,6 @@
 {
   "name": "use-ua-parser-js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React Hook for UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.",
   "main": "dist/index.js",
   "module": "dist/use-ua-parser-js.esm.js",
