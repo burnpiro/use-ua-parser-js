@@ -61,7 +61,7 @@ const myComponent: FC<Props> = (props) => {
 
 # Other Hooks
 
-### `useDevice(usString?: string)`:
+### `useDevice(uaString?: string)`:
 
 ```javascript
 
@@ -72,7 +72,7 @@ const myComponent: FC<Props> = (props) => {
 }
 ```
 
-### `useBrowser(usString?: string)`:
+### `useBrowser(uaString?: string)`:
 
 ```javascript
 
@@ -83,7 +83,7 @@ const myComponent: FC<Props> = (props) => {
 }
 ```
 
-### `useCPU(usString?: string)`:
+### `useCPU(uaString?: string)`:
 
 ```javascript
 
@@ -94,7 +94,7 @@ const myComponent: FC<Props> = (props) => {
 }
 ```
 
-### `useEngine(usString?: string)`:
+### `useEngine(uaString?: string)`:
 
 ```javascript
 
