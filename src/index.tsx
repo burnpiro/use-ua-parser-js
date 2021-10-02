@@ -5,7 +5,10 @@ type IUseUAReturn = Omit<UAParser.IResult, 'ua'>;
 
 const uaParser = new UAParser.UAParser();
 
-function useUA(uastring = window.navigator.userAgent) {
+// Access window.navigator.userAgent only once, this prevents browser from re-rendering
+const defaultUAString = window.navigator.userAgent;
+
+function useUA(uastring = defaultUAString) {
   return React.useMemo<IUseUAReturn | null>(() => {
     try {
       uaParser.setUA(uastring);
@@ -22,7 +25,7 @@ function useUA(uastring = window.navigator.userAgent) {
   }, [uastring]);
 }
 
-function useDevice(uastring = window.navigator.userAgent) {
+function useDevice(uastring = defaultUAString) {
   return React.useMemo<UAParser.IResult['device'] | null>(() => {
     try {
       uaParser.setUA(uastring);
@@ -33,7 +36,7 @@ function useDevice(uastring = window.navigator.userAgent) {
   }, [uastring]);
 }
 
-function useBrowser(uastring = window.navigator.userAgent) {
+function useBrowser(uastring = defaultUAString) {
   return React.useMemo<UAParser.IResult['browser'] | null>(() => {
     try {
       uaParser.setUA(uastring);
@@ -44,7 +47,7 @@ function useBrowser(uastring = window.navigator.userAgent) {
   }, [uastring]);
 }
 
-function useCPU(uastring = window.navigator.userAgent) {
+function useCPU(uastring = defaultUAString) {
   return React.useMemo<UAParser.IResult['cpu'] | null>(() => {
     try {
       uaParser.setUA(uastring);
@@ -55,7 +58,7 @@ function useCPU(uastring = window.navigator.userAgent) {
   }, [uastring]);
 }
 
-function useEngine(uastring = window.navigator.userAgent) {
+function useEngine(uastring = defaultUAString) {
   return React.useMemo<UAParser.IResult['engine'] | null>(() => {
     try {
       uaParser.setUA(uastring);
