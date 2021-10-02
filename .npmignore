@@ -1,0 +1,5 @@
+misc/**/*
+src/**/*
+
+.idea
+tsconfig.json

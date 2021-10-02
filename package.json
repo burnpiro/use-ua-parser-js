@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React Hook for UAParser.js - Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.",
   "main": "dist/index.js",
-  "module": "use-ua-parser-js.esm.js",
+  "module": "dist/use-ua-parser-js.esm.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "tsdx build"
@@ -11,6 +11,8 @@
   "keywords": [
     "user-agent",
     "device",
+    "device-detector",
+    "browser-detector",
     "parser",
     "ua",
     "react-hooks",

@@ -4,7 +4,7 @@
 
 <p align="center">
 <a href="https://travis-ci.org/faisalman/ua-parser-js"><img src="https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master"></a>
-<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg"></a>
+<a href="https://www.npmjs.com/package/use-ua-parser-js"><img src="https://img.shields.io/npm/v/use-ua-parser-js.svg"></a>
 </p>
 
 # useUA React Hook
@@ -56,5 +56,51 @@ const customAgent = 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; 
 const myComponent: FC<Props> = (props) => {
   const UADetails = useUA(customAgent);
   [...]
+}
+```
+
+# Other Hooks
+
+### `useDevice(usString?: string)`:
+
+```javascript
+
+import { useDevice } from 'use-ua-parser-js';
+
+const myComponent: FC<Props> = (props) => {
+  const device = useDevice(); //{ model: string, type: string, vendor: string }
+}
+```
+
+### `useBrowser(usString?: string)`:
+
+```javascript
+
+import { useBrowser } from 'use-ua-parser-js';
+
+const myComponent: FC<Props> = (props) => {
+  const browser = useBrowser(); //{ name: string, version: string }
+}
+```
+
+### `useCPU(usString?: string)`:
+
+```javascript
+
+import { useCPU } from 'use-ua-parser-js';
+
+const myComponent: FC<Props> = (props) => {
+  const cpu = useCPU(); //{ architecture: string }
+}
+```
+
+### `useEngine(usString?: string)`:
+
+```javascript
+
+import { useEngine } from 'use-ua-parser-js';
+
+const myComponent: FC<Props> = (props) => {
+  const engine = useEngine(); //{ name: string, version: string }
 }
 ```
