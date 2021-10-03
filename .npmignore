@@ -3,3 +3,4 @@ src/**/*
 
 .idea
 tsconfig.json
+renovate.json
