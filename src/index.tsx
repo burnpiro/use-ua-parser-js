@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as UAParser from 'ua-parser-js';
+import { isMobile, isTouchDevice } from './helpers';
 
 type IUseUAReturn = Omit<UAParser.IResult, 'ua'>;
 
@@ -20,7 +21,7 @@ function useUA(uastring = defaultUAString) {
         engine: uaParser.getEngine(),
       };
     } catch (err) {
-      return null
+      return null;
     }
   }, [uastring]);
 }
@@ -31,7 +32,7 @@ function useDevice(uastring = defaultUAString) {
       uaParser.setUA(uastring);
       return uaParser.getDevice();
     } catch (err) {
-      return null
+      return null;
     }
   }, [uastring]);
 }
@@ -42,7 +43,7 @@ function useBrowser(uastring = defaultUAString) {
       uaParser.setUA(uastring);
       return uaParser.getBrowser();
     } catch (err) {
-      return null
+      return null;
     }
   }, [uastring]);
 }
@@ -53,7 +54,7 @@ function useCPU(uastring = defaultUAString) {
       uaParser.setUA(uastring);
       return uaParser.getCPU();
     } catch (err) {
-      return null
+      return null;
     }
   }, [uastring]);
 }
@@ -64,9 +65,9 @@ function useEngine(uastring = defaultUAString) {
       uaParser.setUA(uastring);
       return uaParser.getEngine();
     } catch (err) {
-      return null
+      return null;
     }
   }, [uastring]);
 }
 
-export { useUA, useDevice, useBrowser, useCPU, useEngine };
+export { useUA, useDevice, useBrowser, useCPU, useEngine, isMobile, isTouchDevice };

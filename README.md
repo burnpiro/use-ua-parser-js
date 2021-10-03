@@ -104,3 +104,28 @@ const myComponent: FC<Props> = (props) => {
   const engine = useEngine(); //{ name: string, version: string }
 }
 ```
+
+## Helpers
+
+### `isMobile(device: UAParser.IResult['device']): boolean`
+
+```javascript
+import { useDevice, isMobile } from 'use-ua-parser-js';
+
+const myComponent: FC<Props> = (props) => {
+  const device = useDevice(); //{ model: string, type: string, vendor: string }
+  const isCurrentDeviceMobile = isMobile(device);
+}
+```
+
+### `isTouchDevice(device: UAParser.IResult['device']): boolean`
+Check if device is either a `mobile`, `tablet` or `wearable` device. Doesn't include "2:1" laptops.
+
+```javascript
+import { useDevice, isTouchDevice } from 'use-ua-parser-js';
+
+const myComponent: FC<Props> = (props) => {
+  const device = useDevice(); //{ model: string, type: string, vendor: string }
+  const hasTouchScreen = isTouchDevice(device);
+}
+```
