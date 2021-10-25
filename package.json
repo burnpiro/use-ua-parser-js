@@ -41,7 +41,7 @@
     "react-dom": ">=16.8"
   },
   "dependencies": {
-    "ua-parser-js": "^0.7.28"
+    "ua-parser-js": "^1.0.1"
   },
   "publishConfig": {
     "access": "public"
